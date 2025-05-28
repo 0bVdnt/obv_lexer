@@ -15,8 +15,7 @@ lazy_static! {
     // For skipping these
     static ref WHITESPACE_RE: Regex = Regex::new(r"\A\s+").unwrap();
     static ref SINGLE_LINE_COMMENTS_RE: Regex = Regex::new(r"\A//.*").unwrap();
-    // static ref MULTI_LINE_COMMENTS_RE: Regex = Regex::new(r"\A(?s)/\*.*?\*/").unwrap();
-    static ref MULTI_LINE_COMMENTS_RE: Regex = Regex::new(r"\A/\*.*?\*/").unwrap();
+    static ref MULTI_LINE_COMMENTS_RE: Regex = Regex::new(r"\A(?s)/\*.*?\*/").unwrap();
     // Does not consider nested multiline comments
 }
 
