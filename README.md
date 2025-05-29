@@ -91,30 +91,29 @@ The lexer can be run from the command line. It accepts an optional file path as 
 
     This will print informational messages about the source code to `stderr` and the JSON token stream (or error) to `stdout`.
 
-    ````bash
+    ```json
       No source file provided. Use default example code.
       --- Source Code ---
       int main () { return 0; }
       -------------------
-      ```json
-      {
-        "Success": [
-          "KwInt",
-          {
-            "Identifier": "main"
-          },
-          "OpenParen",
-          "CloseParen",
-          "OpenBrace",
-          "KwReturn",
-          {
-            "Constant": 0
-          },
-          "Semicolon",
-          "CloseBrace"
-        ]
-      }
-    ````
+        {
+          "Success": [
+            "KwInt",
+            {
+              "Identifier": "main"
+            },
+            "OpenParen",
+            "CloseParen",
+            "OpenBrace",
+            "KwReturn",
+            {
+              "Constant": 0
+            },
+            "Semicolon",
+            "CloseBrace"
+          ]
+        }
+    ```
 
 2.  **Run with a specific C source file:**
     Create a file, e.g., `test.c`:
@@ -133,7 +132,7 @@ The lexer can be run from the command line. It accepts an optional file path as 
     ./target/debug/obv_lexer test.c
     ```
 
-        Output (to `stdout`):
+    Output (to `stdout`):
 
     ```json
     {
@@ -224,4 +223,5 @@ This lexer serves as a basic starting point. Potential enhancements could includ
 - More robust multi-line comment handling (e.g., detecting unterminated comments explicitly).
 
 ## License
+
 This project is licensed under the MIT License. See the `LICENSE` file for details.
