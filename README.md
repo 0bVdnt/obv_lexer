@@ -222,3 +222,6 @@ This lexer serves as a basic starting point. Potential enhancements could includ
 - Tracking line and column numbers for tokens and errors for better diagnostics.
 - Support for preprocessor directives.
 - More robust multi-line comment handling (e.g., detecting unterminated comments explicitly).
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
